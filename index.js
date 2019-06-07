@@ -122,6 +122,7 @@ class HTTPError extends Error {
         Error.captureStackTrace(this, HTTPError);
         this.name = this.constructor.name;
         Object.assign(this, response);
+        console.log(this.stack);
     }
 }
 
